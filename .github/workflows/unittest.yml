@@ -13,9 +13,6 @@ jobs:
 
       - name: Cache Node npm
         uses: actions/setup-node@v2
-        with:
-          cache: "npm"
-          cache-dependency-path: "/package-lock.json"
 
       - run: npm ci --no-audit
         working-directory: "/"

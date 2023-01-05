@@ -39,11 +39,11 @@ const App = () => {
       <Counter counter={counter} />
 
       <button type="button" onClick={() => setCounter(counter + 1)}>
-        Increment +
+        Increment
       </button>
 
       <button type="button" onClick={() => setCounter(counter - 1)}>
-        Decrement -
+        Decrement
       </button>
     </div>
   );

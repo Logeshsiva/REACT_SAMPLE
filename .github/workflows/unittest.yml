@@ -1,0 +1,25 @@
+name: UI Test 
+on:
+  push:
+    branches:
+      - main
+jobs:
+  unitTest:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Cache Node npm
+        uses: actions/setup-node@v2
+        with:
+          cache: "npm"
+          cache-dependency-path: "/package-lock.json"
+
+      - run: npm ci --no-audit
+        working-directory: "/"
+
+      - name: Test
+        run: npm run test
+        working-directory: "/"

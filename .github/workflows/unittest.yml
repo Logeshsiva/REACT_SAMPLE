@@ -15,8 +15,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - run: npm ci --no-audit
-        working-directory: "/"
 
       - name: Test
         run: npm run test
-        working-directory: "/"
+

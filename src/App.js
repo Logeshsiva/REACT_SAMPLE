@@ -45,6 +45,16 @@ const App = () => {
       <button type="button" onClick={() => setCounter(counter - 1)}>
         Decrement
       </button>
+
+      <h2>My Async Data</h2>
+
+      {data.error && <div className="error">Error</div>}
+
+      <ul>
+        {data.list.map(item => (
+          <li key={item.objectID}>{item.title}</li>
+        ))}
+      </ul>
     </div>
   );
 };

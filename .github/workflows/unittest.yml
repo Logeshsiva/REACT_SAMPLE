@@ -1,11 +1,11 @@
-name: UI Test 
+name: UI Test //
 on:
-  pull_request:
+ pull_request:
     branches:
       - main
 jobs:
   unitTest:
-    name: Unit Tests
+    name: Unit Tests 
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -18,4 +18,7 @@ jobs:
 
       - name: Test
         run: npm run test
+        
+      - name: Cypress
+        run: npm run cypress
 
